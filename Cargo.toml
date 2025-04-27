@@ -1,0 +1,29 @@
+[package]
+name = "iced-material"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+palette = "*"
+freedesktop-icons = "*"
+
+[dependencies.iced]
+#git = "https://github.com/ibaryshnikov/iced.git"
+#rev = "901bbeb"
+features = ["wgpu","lazy","svg","advanced"]
+path = "../../iced"
+
+[dependencies.iced_winit]
+#git = "https://github.com/ibaryshnikov/iced.git"
+#rev = "901bbeb"
+path = "../../iced/winit"
+
+
+[dependencies.iced_wgpu]
+#git = "https://github.com/ibaryshnikov/iced.git"
+#rev = "901bbeb"
+path = "../../iced/wgpu"
+
+#iced = {git="https://github.com/iced-rs/iced",features=["lazy","svg","advanced"]}
