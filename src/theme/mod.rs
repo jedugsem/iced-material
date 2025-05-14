@@ -2,6 +2,7 @@ pub mod button;
 pub mod checkbox;
 pub mod container;
 pub mod data;
+pub mod markdown;
 pub mod menu;
 pub mod pick_list;
 pub mod scrollable;

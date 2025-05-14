@@ -12,7 +12,7 @@ freedesktop-icons = "*"
 [dependencies.iced]
 #git = "https://github.com/ibaryshnikov/iced.git"
 #rev = "901bbeb"
-features = ["wgpu","lazy","svg","advanced"]
+features = ["wgpu","lazy","svg","advanced","markdown","highlighter"]
 path = "../iced"
 
 [dependencies.iced_winit]

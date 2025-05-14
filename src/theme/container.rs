@@ -15,6 +15,27 @@ impl Catalog for Theme {
     }
 }
 
+pub fn secondary_rounded(theme: &Theme) -> Style {
+    let background = theme.colors().accent.darkest;
+
+    Style {
+        background: Some(Background::Color(background)),
+        text_color: Some(theme.colors().text.base),
+        border: Border::default().rounded(10),
+        ..Default::default()
+    }
+}
+pub fn grey_rounded(theme: &Theme) -> Style {
+    let background = theme.colors().background.darker;
+
+    Style {
+        background: Some(Background::Color(background)),
+        text_color: Some(theme.colors().text.base),
+        border: Border::default().rounded(10),
+        ..Default::default()
+    }
+}
+
 pub fn grey(theme: &Theme) -> Style {
     let background = theme.colors().background.darker;
 

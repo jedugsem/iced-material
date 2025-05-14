@@ -14,6 +14,46 @@ impl Catalog for Theme {
         class(self, status)
     }
 }
+pub fn succes(theme: &Theme, status: Status) -> Style {
+    match status {
+        Status::Active | Status::Pressed => Style {
+            background: Some(Background::Color(theme.colors().accent.high_alpha)),
+            text_color: theme.colors().accent.base,
+            border: Border {
+                radius: 3.0.into(),
+                ..Default::default()
+            },
+            ..Default::default()
+        },
+        Status::Hovered => Style {
+            background: Some(Background::Color(theme.colors().accent.med_alpha)),
+            text_color: theme.colors().accent.base,
+            border: Border {
+                radius: 3.0.into(),
+                ..Default::default()
+            },
+            ..Default::default()
+        },
+        Status::Disabled => {
+            let active = secondary(theme, Status::Active);
+
+            Style {
+                text_color: Color {
+                    a: 0.2,
+                    ..active.text_color
+                },
+                border: Border {
+                    color: Color {
+                        a: 0.2,
+                        ..active.text_color
+                    },
+                    ..Default::default()
+                },
+                ..active
+            }
+        }
+    }
+}
 
 pub fn text_button(theme: &Theme, status: Status) -> Style {
     match status {
@@ -127,19 +167,19 @@ pub fn selected(theme: &Theme, _status: Status) -> Style {
 pub fn secondary(theme: &Theme, status: Status) -> Style {
     match status {
         Status::Active | Status::Pressed => Style {
-            background: Some(Background::Color(theme.colors().accent.high_alpha)),
+            background: Some(Background::Color(theme.colors().background.dark)),
             text_color: theme.colors().accent.base,
             border: Border {
-                radius: 3.0.into(),
+                radius: 10.0.into(),
                 ..Default::default()
             },
             ..Default::default()
         },
         Status::Hovered => Style {
-            background: Some(Background::Color(theme.colors().accent.med_alpha)),
+            background: Some(Background::Color(theme.colors().background.lightest)),
             text_color: theme.colors().accent.base,
             border: Border {
-                radius: 3.0.into(),
+                radius: 10.0.into(),
                 ..Default::default()
             },
             ..Default::default()

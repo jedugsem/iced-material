@@ -1,5 +1,4 @@
 use iced::Color;
-use palette::rgb::Rgb;
 use palette::{DarkenAssign, FromColor, LightenAssign, Mix, Okhsl, Srgb};
 
 #[derive(Debug, Clone)]

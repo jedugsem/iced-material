@@ -1,7 +1,7 @@
 use iced::{
     widget::{
         container,
-        scrollable::{Catalog, Rail, Scrollbar, Scroller, Status, Style, StyleFn},
+        scrollable::{Catalog, Rail, Scroller, Status, Style, StyleFn},
     },
     Background, Border, Color, Shadow,
 };
