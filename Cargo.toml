@@ -13,17 +13,17 @@ freedesktop-icons = "*"
 #git = "https://github.com/ibaryshnikov/iced.git"
 #rev = "901bbeb"
 features = ["wgpu","lazy","svg","advanced","markdown","highlighter"]
-path = "../iced"
+git = "https://github.com/jedugsem/iced"
 
 [dependencies.iced_winit]
 #git = "https://github.com/ibaryshnikov/iced.git"
 #rev = "901bbeb"
-path = "../iced/winit"
+git = "https://github.com/jedugsem/iced"
 
 
 [dependencies.iced_wgpu]
 #git = "https://github.com/ibaryshnikov/iced.git"
 #rev = "901bbeb"
-path = "../iced/wgpu"
+git = "https://github.com/jedugsem/iced"
 
 #iced = {git="https://github.com/iced-rs/iced",features=["lazy","svg","advanced"]}
